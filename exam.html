@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exam</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <h1>JavaScript Exam</h1>
+    <form id="examForm">
+        <!-- Task 1 -->
+        <h3>Task 1: Insert the missing syntax to change the image source of the HTML element with the id 'image'.</h3>
+        <p>
+            <code>&lt;img id="image" src="smiley.gif"&gt;</code><br>
+            <code>&lt;script&gt;</code><br>
+            <code>document.getElementById("image")_______= "pic_mountain.jpg";</code>
+            <code>&lt;/script&gt;</code>
+            <br>
+            <input type="text" id="task1" placeholder="Write your answer here">
+            
+        
+        </p>
+
+        <!-- Task 2 -->
+        <h3>Task 2: Insert the missing syntax to change the content of the HTML element with the id 'demo'.</h3>
+        <p>
+            <code>__________._________('demo').____________ = 'Hello!';</code><br>
+            <input type="text" id="task2" placeholder="Write your answer here">
+        </p>
+
+        <!-- Task 3 -->
+        <h3>Task 3: Insert the missing syntax to alert the value of the element with the id 'demo'.</h3>
+        <p>
+            <code>alert(__________._________('demo').____________);</code><br>
+            <input type="text" id="task3" placeholder="Write your answer here">
+        </p>
+
+        <!-- Task 4 -->
+        <h3>Task 4: Use the getElementById method to find the &lt;p&gt; element, and change its text to "Hello".</h3>
+        <p>
+            <code>&lt;p id="demo"&gt;&lt;/p&gt;</code><br>
+            <code>&lt;script&gt;</code><br>
+            <code>"_____________.___________._________=Hello";</code><br>
+            <code>&lt;/script&gt;</code>
+            <br>
+            <input type="text" id="task4" placeholder="Write your answer here">
+            
+        </p>
+
+        <!-- Task 5 -->
+        <h3>Task 5: Use the getElementsByTagName method to find the first &lt;p&gt; element, and change its text to "Hello".</h3>
+        <p>
+            <code>&lt;p id="demo"&gt;&lt;/p&gt;</code><br>
+            <code>&lt;script&gt;</code><br>
+            <code>______________.__________.____________=Hello";</code><br>
+            <code>&lt;/script&gt;</code>
+            <br>
+            <input type="text" id="task5" placeholder="Write your answer here">
+           
+        </p>
+
+        <!-- Task 6 -->
+        <h3>Task 6: Change the text of the first element that has the class name "test".</h3>
+        <p>
+            <code>&lt;p class="test"&gt;&lt;/p&gt;</code><br>
+            <code>&lt;p class="test"&gt;&lt;/p&gt;</code><br>
+            <code>&lt;script&gt;</code><br>
+            <code>_____________._____________._________= "Hello";</code><br>
+            <code>&lt;/script&gt;</code><br>
+
+            <input type="text" id="task6" placeholder="Write your answer here">
+            
+        </p>
+
+        <button type="button" onclick="gradeExam()">Grade</button>
+    </form>
+
+    <h2>Results</h2>
+    <div id="results"></div>
+
+    <script src="autograde.js"> </script>
+</body>
+</html>

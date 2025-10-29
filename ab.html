@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CS Cluster</title>
+        <link rel="stylesheet" href="cs.css">
+    </head>
+    <body>
+        <div class="card_container">
+            <div class="card">
+                <p>This is a card component. Click the button to see</p>
+                <p id="textlarge"> 0 </p>
+                <div class="button_container">
+                    <button type="button" id="add">Add 1</button>
+                    <button type="button" id="multiply">View Multiplication Table</button>
+                    <button type="button" id="multiply" onclick="findBinary()">Binary value</button>
+                </div>
+               
+    
+            </div>
+    
+            <div class="card">
+                <table id="multiplicationTable" border="1">
+                    <th colspan="2">Multiplication Table for <b> number </b></th>
+                    <tr> <td id="td1a"> 1</td> <td id="td1b"> --</td></tr>
+                    <tr> <td id="td2a"> 2</td> <td id="td2b"> --</td></tr>
+                    <tr> <td id="td3a"> 3</td> <td id="td3b"> --</td></tr>
+                    <tr> <td id="td4a"> 4</td> <td id="td4b"> --</td></tr>
+                    <tr> <td id="td5a"> 5</td> <td id="td5b">-- </td></tr>
+                    <tr> <td id="td6a"> 6</td> <td id="td6b"> --</td></tr>
+                    <tr> <td id="td7a"> 7</td> <td id="td7b">-- </td></tr>
+                    <tr> <td id="td8a"> 8</td> <td id="td8b">-- </td></tr>
+                    <tr> <td id="td9a"> 9</td> <td id="td9b">-- </td></tr>
+                    <tr> <td id="td10a"> 10</td><td id="td10b">-- </td></tr>
+    
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>Binary Value</h3>
+                <p id="binary"> </p>
+
+            </div>
+        </div>
+       
+        <script src="ab.js"></script>
+    </body>
+</html>
