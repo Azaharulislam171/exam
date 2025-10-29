@@ -73,12 +73,40 @@
             
         </p>
 
-        <button type="button" onclick="gradeExam()">Grade</button>
+        <button type="submit" onclick="gradeExam()">Grade</button>
     </form>
 
     <h2>Results</h2>
     <div id="results"></div>
 
-    <script src="autograde.js"> </script>
+     <script>
+    document.getElementById("examForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Collect answers
+      const answers = {};
+      for (let i = 1; i <= 6; i++) {
+        answers[`task${i}`] = document.getElementById(`task${i}`).value.trim();
+      }
+
+      // Send to server for grading
+      const res = await fetch("/grade", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(answers),
+      });
+      const data = await res.json();
+
+      // Display results
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = `<h2>Results</h2>`;
+      data.details.forEach(d => {
+        resultsDiv.innerHTML += `<p>${d.task}: ${d.correct ? 
+          '<span style="color:green">Correct</span>' : 
+          `<span style="color:red">Incorrect (Expected: ${d.expected})</span>`}</p>`;
+      });
+      resultsDiv.innerHTML += `<h3>Total Score: ${data.score}/${data.total}</h3>`;
+    });
+  </script>
 </body>
 </html>
