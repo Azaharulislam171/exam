@@ -19,7 +19,7 @@ function gradeExam(answers) {
     const isCorrect = student === correctAns;
 
     if (isCorrect) score++;
-    details.push({ task, correct: isCorrect, expected: correctAns });
+    details.push({ task, correct: isCorrect });
   }
 
   return { score, total: Object.keys(correctAnswers).length, details };
